@@ -1,9 +1,7 @@
--- Crear tabla de productos con campos
--- Es importante definir claves primarias y restricciones de integridad para garantizar datos consistentes y facilitar las consultas.
-
-CREATE TABLE DataWarehouse.dbo.dim_Trimestres (
-	Trimestre tinyint IDENTITY(1,1) NOT NULL,
-	NomTrimestre nvarchar(15) COLLATE SQL_Latin1_General_CP1_CI_AS NOT NULL,
-	NomCortoTrimestre char(6) COLLATE SQL_Latin1_General_CP1_CI_AS NOT NULL,
-	CONSTRAINT DIM_Trimestres_PK PRIMARY KEY (Trimestre)
-);
+INSERT INTO DataWareHouse.dbo.DIM_Trimestres 
+(NomTrimestre, NomCortoTrimestre)
+VALUES
+('Trimestre 1', 'TRIM 1'),
+('Trimestre 2', 'TRIM 2'),
+('Trimestre 3', 'TRIM 3'),
+('Trimestre 4', 'TRIM 4')
